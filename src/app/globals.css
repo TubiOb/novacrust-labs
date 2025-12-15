@@ -1,26 +1,125 @@
+/* FONT IMPORT LINK(S) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+    :root {
+      /* Light mode variables */
+      --header-height: 3.5rem;
+      --main-color: #033a80;
+      --bg-color: #fff;
+      --title-color: #27292a;
+      --text-color: #000;
+      --text-color-light: #8a8f93;
+      --light-text-color: #7c899a;
+      --text-color-green: #6a994e;
+      --text-green-dark: #a3b18a;
+      --hover: #5805ff;
+      --big-font: 3.2rem;
+      --medium-font: 1.8rem;
+      --h1-font-size: 1.5rem;
+      --h2-font-size: 1.25rem;
+      --h3-font-size: 1rem;
+      --p-font: 0.941rem;
+      --smaller-font-size: .75rem;
+      --font-medium: 15px;
+      --font-small: 13px;
+      --font-smaller: 11px;
+      --card-color: #eaf4f4;
+      --hue: 207;
+      --sat: 90%;
+      --lig: 61%;
+      --first-color: hsl(var(--hue), var(--sat), var(--lig));
+  
+      /* System variables for Tailwind */
+      --background: var(--bg-color);
+      --foreground: var(--text-color);
+  
+      --card: var(--card-color);
+      --card-foreground: var(--text-color);
+  
+      --primary: var(--main-color);
+      --primary-foreground: #ffffff;
+  
+      --secondary: var(--hover);
+      --secondary-foreground: #ffffff;
+  
+      --muted: var(--text-color-light);
+      --muted-foreground: var(--light-text-color);
+  
+      --accent: var(--first-color);
+      --accent-foreground: var(--title-color);
+  
+      --border: var(--text-color-light);
+      --input: var(--text-color-light);
+  
+      --radius: 0.5rem;
+    }
+  
+    .dark {
+      /* Dark mode variables */
+      --bg-color: #181a1b;
+      --title-color: #f2f2f3;
+      --text-color: #fff;
+      --text-color-light: #a1a1aa;
+      --light-text-color: #9ca3af;
+      --card-color: #749498;
+  
+      /* System variables for Tailwind */
+      --background: var(--bg-color);
+      --foreground: var(--text-color);
+  
+      --card: var(--card-color);
+      --card-foreground: var(--text-color);
+  
+      --primary: var(--main-color);
+      --primary-foreground: #ffffff;
+  
+      --secondary: var(--hover);
+      --secondary-foreground: #ffffff;
+  
+      --muted: var(--text-color-light);
+      --muted-foreground: var(--light-text-color);
+  
+      --accent: var(--first-color);
+      --accent-foreground: var(--title-color);
+  
+      --border: var(--text-color-light);
+      --input: var(--text-color-light);
+    }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    font-family: "Outfit", sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1 {
+    @apply font-bold;
+  }
+
+  h2,
+  h3 {
+    @apply font-semibold;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* * {
+    @apply border-border;
+} */
+
+/* body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    @apply antialiased;
+} */
