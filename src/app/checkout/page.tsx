@@ -132,7 +132,7 @@ export default function Page() {
                               <ChevronDownIcon className="size-3" />
                             </Button>
                           </DropdownMenuTrigger>
-                          <DropdownMenuContent align="end" className="rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
+                          <DropdownMenuContent align="end" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                             <div className="relative mb-3">
                               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-5 text-[#828282]" />
                               <Input className="pl-10 pr-4 py-4 text-sm bg-white border border-[#E0E0E0] rounded-full focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#828282]" placeholder="Search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
@@ -140,12 +140,11 @@ export default function Page() {
                             <div className="space-y-1 max-h-70 overflow-y-auto">
                               {filteredCurriencies.length > 0 ? (
                                 filteredCurriencies.map((currency) => (
-                                  <DropdownMenuItem key={currency.value} onClick={() => setSelectedCurrency(currency)} className="flex items-center gap-3 p-1 text-base font-medium rounded-xl cursor-pointer hover:bg-[#F5F5F5] focus:bg-[#F5F5F5] focus:text-[#013941] transition-colors">
+                                  <DropdownMenuItem key={currency.value} onClick={() => setSelectedCurrency(currency)} className="flex items-center gap-3 p-1 text-sm text-[#013941] font-medium rounded-xl cursor-pointer hover:bg-[#F5F5F5] focus:bg-[#F5F5F5] focus:text-[#013941] transition-colors">
                                     <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0">
                                       <Image src={currency.icon} alt={currency.label} className="lg:w-7 lg:h-7 w-5 h-5" />
                                     </div>
-                                    {currency.label}
-                                    {/* <span className='text-sm'></span> */}
+                                    <span className='text-sm'>{currency.label}</span>
                                   </DropdownMenuItem>
       
                                 ))
@@ -185,7 +184,7 @@ export default function Page() {
                             <ChevronDownIcon className="size-3" />
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end" className="rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
+                        <DropdownMenuContent align="end" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                           <div className="relative mb-3">
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-5 text-[#828282]" />
                             <Input className="pl-10 pr-4 py-4 text-sm bg-white border border-[#E0E0E0] rounded-full focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#828282]" placeholder="Search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
@@ -197,8 +196,7 @@ export default function Page() {
                                   <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0">
                                     <Image src={currency.icon} alt={currency.label} className="lg:w-7 lg:h-7 w-5 h-5" />
                                   </div>
-                                  {currency.label}
-                                  {/* <span className='text-sm'></span> */}
+                                  <span className='text-sm'>{currency.label}</span>
                                 </DropdownMenuItem>
     
                               ))
@@ -245,16 +243,15 @@ export default function Page() {
                             )}
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="start" className="rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
+                        <DropdownMenuContent align="start" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                           <div className="space-y-1 max-h-70 overflow-y-auto">
                             {paymentOption.length > 0 ? (
                               paymentOption.map((option) => (
-                                <DropdownMenuItem key={option.value} onClick={() => setSelectedPaymentOption(option)} className="flex items-center gap-3 p-1 text-base font-medium rounded-xl cursor-pointer hover:bg-[#F5F5F5] focus:bg-[#F5F5F5] focus:text-[#013941] transition-colors">
+                                <DropdownMenuItem key={option.value} onClick={() => setSelectedPaymentOption(option)} className="flex items-center gap-3 p-1 text-sm text-[#013941] font-medium rounded-xl cursor-pointer hover:bg-[#F5F5F5] focus:bg-[#F5F5F5] focus:text-[#013941] transition-colors">
                                   <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0">
                                     <Image src={option.icon} alt={option.label} className="lg:w-7 lg:h-7 w-5 h-5" />
                                   </div>
-                                  {option.label}
-                                  {/* <span></span> */}
+                                  <span>{option.label}</span>
                                 </DropdownMenuItem>
                               ))
                             )
@@ -306,16 +303,15 @@ export default function Page() {
                             )}
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="start" className="rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
+                        <DropdownMenuContent align="start" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                           <div className="space-y-1 max-h-70 overflow-y-auto">
                             {paymentOption.length > 0 ? (
                               paymentOption.map((option) => (
-                                <DropdownMenuItem key={option.value} onClick={() => setSelectedPaymentToOption(option)} className="flex items-center gap-3 p-1 text-base font-medium rounded-xl cursor-pointer hover:bg-[#F5F5F5] focus:bg-[#F5F5F5] focus:text-[#013941] transition-colors">
+                                <DropdownMenuItem key={option.value} onClick={() => setSelectedPaymentToOption(option)} className="flex items-center gap-3 p-1 text-sm text-[#013941] font-medium rounded-xl cursor-pointer hover:bg-[#F5F5F5] focus:bg-[#F5F5F5] focus:text-[#013941] transition-colors">
                                   <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0">
                                     <Image src={option.icon} alt={option.label} className="lg:w-7 lg:h-7 w-5 h-5" />
                                   </div>
-                                  {option.label}
-                                  {/* <span></span> */}
+                                  <span>{option.label}</span>
                                 </DropdownMenuItem>
       
                               ))
