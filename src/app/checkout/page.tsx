@@ -132,7 +132,7 @@ export default function Page() {
                               <ChevronDownIcon className="size-3" />
                             </Button>
                           </DropdownMenuTrigger>
-                          <DropdownMenuContent align="end" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem]">
+                          <DropdownMenuContent align="end" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                             <div className="relative mb-3">
                               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-5 text-[#828282]" />
                               <Input className="pl-10 pr-4 py-4 text-sm bg-white border border-[#E0E0E0] rounded-full focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#828282]" placeholder="Search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
@@ -184,7 +184,7 @@ export default function Page() {
                             <ChevronDownIcon className="size-3" />
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem]">
+                        <DropdownMenuContent align="end" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                           <div className="relative mb-3">
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-5 text-[#828282]" />
                             <Input className="pl-10 pr-4 py-4 text-sm bg-white border border-[#E0E0E0] rounded-full focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#828282]" placeholder="Search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
@@ -222,7 +222,7 @@ export default function Page() {
                     <div className="bg-[#F7F7F7] border border-[#E0E0E0] rounded-2xl lg:rounded-3xl p-0 cursor-pointer w-full">
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild className="cursor-pointer w-full p-6">
-                          <Button variant="ghost" className="flex items-center justify-between gap-2 px-3 p-6 text-sm font-medium text-[#013941] bg-transparent hover:bg-transparent border-0 ring-0 outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0">
+                          <Button variant="ghost" className="flex items-center justify-between gap-2 px-3 p-6 text-sm font-medium text-[#013941] bg-transparent hover:bg-transparent border-0 ring-0 outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 z-100">
                             {selectedPaymentOption ? (
                               <>
                                 <div className="flex items-center gap-3">
@@ -243,7 +243,7 @@ export default function Page() {
                             )}
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="start" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem]">
+                        <DropdownMenuContent align="start" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                           <div className="space-y-1 max-h-70 overflow-y-auto">
                             {paymentOption.length > 0 ? (
                               paymentOption.map((option) => (
@@ -303,7 +303,7 @@ export default function Page() {
                             )}
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="start" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem]">
+                        <DropdownMenuContent align="start" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                           <div className="space-y-1 max-h-70 overflow-y-auto">
                             {paymentOption.length > 0 ? (
                               paymentOption.map((option) => (

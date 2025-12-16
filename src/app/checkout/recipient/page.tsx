@@ -110,7 +110,7 @@ export default function Page() {
                       <ChevronDownIcon className="w-5 h-5 text-[#013941]" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem]">
+                  <DropdownMenuContent className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                     {banks.map((bank) => (
                       <DropdownMenuItem key={bank.value} onClick={() => setSelectedBank(bank)} className="text-base py-3 cursor-pointer" >
                         {bank.label}
@@ -178,7 +178,7 @@ export default function Page() {
                         <ChevronDownIcon className="w-4 h-4 text-[#013941]" />
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] items-center">
+                    <DropdownMenuContent className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] items-center z-100">
                       {countryCodes.map((item) => (
                         <DropdownMenuItem key={item.code} onClick={() => setSelectedCountryCode(item)} className="gap-3 cursor-pointer py-3" >
                           <Image src={item.flag} alt={item.country} className="lg:w-7 lg:h-7 w-5 h-5" />
