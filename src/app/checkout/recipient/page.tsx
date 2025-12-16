@@ -4,8 +4,8 @@ import { ReusableCard } from "@/components/ReusableCard"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { ChevronDownIcon, ArrowLeft, Copy, Info } from "lucide-react"
-import { useActionState, useState } from "react"
+import { ChevronDownIcon, ArrowLeft, Copy, Info, Loader2 } from "lucide-react"
+import { useActionState, useEffect, useState } from "react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { validateStep1, validateStep2, confirmTransaction, RecipientState } from "@/app/actions/recipient"
 
@@ -48,25 +48,29 @@ export default function RecipientPage() {
   const network = "ETH"
   const wallet = "Other"
 
+  useEffect(() => {
+    if (step1State.success && step1State.accountName) {
+      setAccountName(step1State.accountName)
+      setCurrentStep(2)
+    }
+  }, [step1State])
+
+  useEffect(() => {
+    if (step2State.success) {
+      setCurrentStep(3)
+    }
+  }, [step2State])
+
   const handleStep1Submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
-    const result = await step1Action(formData)
-
-    if (result?.success && result?.accountName) {
-      setAccountName(result.accountName)
-      setCurrentStep(2)
-    }
+    step1Action(formData)
   }
 
   const handleStep2Submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
-    const result = await step2Action(formData)
-
-    if (result?.success) {
-      setCurrentStep(3)
-    }
+    step2Action(formData)
   }
 
   const handleBack = () => {
