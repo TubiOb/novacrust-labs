@@ -192,7 +192,7 @@ export default function Page() {
                           <div className="space-y-1 max-h-70 overflow-y-auto">
                             {fiatCurrencies.length > 0 ? (
                               fiatCurrencies.map((currency) => (
-                                <DropdownMenuItem key={currency.value} onClick={() => setSelectedFiatCurrency(currency)} className="flex items-center gap-3 p-1 text-base font-medium rounded-xl cursor-pointer hover:bg-[#F5F5F5] focus:bg-[#F5F5F5] focus:text-[#013941] transition-colors">
+                                <DropdownMenuItem key={currency.value} onClick={() => setSelectedFiatCurrency(currency)} className="flex items-center gap-3 p-1 text-sm text-[#013941] font-medium rounded-xl cursor-pointer hover:bg-[#F5F5F5] focus:bg-[#F5F5F5] focus:text-[#013941] transition-colors">
                                   <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0">
                                     <Image src={currency.icon} alt={currency.label} className="lg:w-7 lg:h-7 w-5 h-5" />
                                   </div>
