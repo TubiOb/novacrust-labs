@@ -1,0 +1,12 @@
+export { default as Eth } from './eth.svg';
+export { default as Ngn } from './ngn.svg';
+export { default as Dollar } from './us.svg';
+export { default as Euros } from './eu.svg';
+export { default as Pounds } from './uk.svg';
+export { default as Usdt_Celo } from './usdt-celo.svg';
+export { default as Usdt_Ton } from './usdt-ton.svg';
+export { default as Usdt_Bnb } from './usdt-bnb.svg';
+export { default as Metamask } from './metamask.svg';
+export { default as Rainbow } from './rainbow.svg';
+export { default as WalletConnect } from './walletconnect.svg';
+export { default as OtherWallets } from './otherwallets.svg';
