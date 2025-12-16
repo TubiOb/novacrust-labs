@@ -10,3 +10,5 @@ export { default as Metamask } from './metamask.svg';
 export { default as Rainbow } from './rainbow.svg';
 export { default as WalletConnect } from './walletconnect.svg';
 export { default as OtherWallets } from './otherwallets.svg';
+export { default as Novacrust } from './novacrust.svg';
+export { default as NovacrustNameLogo } from './novacrust_nameLogo.svg';

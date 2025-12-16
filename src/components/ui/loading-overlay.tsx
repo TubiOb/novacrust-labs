@@ -1,3 +1,4 @@
+import { Loader2 } from "lucide-react";
 import Loader from "./Loader/Loader";
 import { Skeleton } from "./skeleton";
 
@@ -64,7 +65,9 @@ export function LoadingOverlay({ isLoading, activeTab = 'cryptoToCash' }: Loadin
         {/* <Skeleton className="h-16 w-full rounded-3xl bg-[#013941]/10" /> */}
 
         <div className="flex items-center justify-center gap-2 text-[#013941]">
-          <Loader type='bars' width={40} height={40} color="#013941" />
+          {isLoading && (
+            <Loader2 className="w-5 h-5 animate-spin mr-2 cursor-pointer" />
+          )}
           <span className="text-sm font-medium">
             {activeTab === 'cryptoToCash' ? 'Processing conversion...' : 'Submitting...'}
           </span>

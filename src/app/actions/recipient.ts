@@ -61,10 +61,8 @@ export async function validateStep1(prevState: RecipientState, formData: FormDat
   try {
     const { bank, accountNumber } = validateFields.data
 
-    // Simulate API call to verify account
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
-    // Simulate account name lookup
     const accountName = "ODUTUGA GBEKE"
 
     console.log("Step 1 validated:", { bank, accountNumber, accountName })
@@ -86,6 +84,8 @@ export async function validateStep1(prevState: RecipientState, formData: FormDat
     }
   }
 }
+
+
 
 export async function validateStep2(prevState: RecipientState, formData: FormData): Promise<RecipientState> {
   const validateFields = step2Schema.safeParse({
@@ -109,7 +109,6 @@ export async function validateStep2(prevState: RecipientState, formData: FormDat
   try {
     const { accountName, recipientEmail, phoneNumber, countryCode } = validateFields.data
 
-    // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
     console.log("Step 2 validated:", {
@@ -157,12 +156,11 @@ export async function confirmTransaction(prevState: RecipientState, formData: Fo
   try {
     const { walletAddress, amountToSend, network } = validateFields.data
 
-    // Simulate transaction processing
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
     console.log("Transaction confirmed:", { walletAddress, amountToSend, network })
 
-    redirect("/recipient/success")
+    redirect("/checkout/recipient/success")
   } catch (err: any) {
     if (isRedirectError(err)) {
       throw err
