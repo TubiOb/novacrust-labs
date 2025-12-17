@@ -135,7 +135,7 @@ export default function Page() {
                           <DropdownMenuContent align="end" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                             <div className="relative mb-3">
                               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-5 text-[#828282]" />
-                              <Input className="pl-10 pr-4 py-4 text-sm bg-white border border-[#E0E0E0] rounded-full focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#828282]" placeholder="Search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                              <Input className="pl-10 pr-4 py-4 text-sm bg-white text-[#000E10] border border-[#E0E0E0] rounded-full focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#828282]" placeholder="Search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                             </div>
                             <div className="space-y-1 max-h-70 overflow-y-auto">
                               {filteredCurriencies.length > 0 ? (
@@ -187,7 +187,7 @@ export default function Page() {
                         <DropdownMenuContent align="end" className="[--radius:0.95rem] rounded-xl bg-white border border-[#E0E0E0] p-2.5 w-[calc(100vw-2rem)] sm:w-70 md:w-[20rem] max-w-[20rem] z-100">
                           <div className="relative mb-3">
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-5 text-[#828282]" />
-                            <Input className="pl-10 pr-4 py-4 text-sm bg-white border border-[#E0E0E0] rounded-full focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#828282]" placeholder="Search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                            <Input className="pl-10 pr-4 py-4 text-sm bg-white text-[#000E10] border border-[#E0E0E0] rounded-full focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-[#828282]" placeholder="Search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                           </div>
                           <div className="space-y-1 max-h-70 overflow-y-auto">
                             {fiatCurrencies.length > 0 ? (
@@ -371,7 +371,7 @@ export default function Page() {
                   <div className="flex flex-col gap-2">
                     <Label className="text-[#013941] font-medium text-[1rem]">Email</Label>
                     <div className="bg-[#F7F7F7] border border-[#E0E0E0] rounded-2xl lg:rounded-3xl p-0 cursor-pointer w-full">
-                      <Input type="email" name='email' placeholder="Enter your email" className="border-0 bg-transparent px-5 py-6 focus-visible:ring-0 rounded-2xl lg:rounded-3xl"></Input>
+                      <Input type="email" name='email' placeholder="Enter your email" className="border-0 bg-transparent text-[#000E10] px-5 py-6 focus-visible:ring-0 rounded-2xl lg:rounded-3xl"></Input>
                     </div>
                     {emailState.errors?.email && (
                       <div className="flex items-center gap-1 text-red-500 text-sm">
@@ -417,7 +417,7 @@ export default function Page() {
                   <div className="flex flex-col gap-2">
                     <Label className="text-[#013941] font-medium text-[1rem]">Email</Label>
                     <div className="bg-[#F7F7F7] border border-[#E0E0E0] rounded-2xl lg:rounded-3xl p-0 cursor-pointer w-full">
-                      <Input type="email" name='email' placeholder="Enter your email" className="border-0 bg-transparent px-5 py-6 focus-visible:ring-0 rounded-3xl"></Input>
+                      <Input type="email" name='email' placeholder="Enter your email" className="border-0 bg-transparent text-[#000E10] px-5 py-6 focus-visible:ring-0 rounded-3xl"></Input>
                     </div>
                     {emailState.errors?.email && (
                       <div className="flex items-center gap-1 text-red-500 text-sm">
